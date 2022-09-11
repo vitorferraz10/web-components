@@ -7,7 +7,7 @@ const PUBLIC_DIR = "public";
 module.exports = {
   devtool: "source-map",
   devServer: {
-    contentBase: path.join(__dirname, PUBLIC_DIR),
+    
     hot: true,
     port: 3340,
   },
@@ -17,10 +17,7 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ["@babel/preset-env"],
-        },
+        loader: "babel-loader",       
         test: /\.js$/,
       },
       {
